@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title> 📚 Book Shop | Inbar S</title>
+</head>
+
+<body onload="onInit()">
+
+    <header>📚 Welcome to my BOOK SHOP!</header>
+    <h4>proud my self! did 99% without picking in 'cars'!!</h4>
+    <h4>more work to do!</h4>
+    <p onClick="onAddBook()" class="create-book">Create new book 📘</p>
+
+    <table class="booksTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="book-modal hide">
+        <div class="book-img"></div>
+        <h1 class="book-name"></h1>
+        <h3>Price:&nbsp;<span class="book-price"></span> &#8362;</h3>
+        <h3>Rate:&nbsp;<input onchange="onSetRate(this.id, this.value)" class="book-rate" type="number" min="1" max="10"></h3>
+        <h5>Id:&nbsp;<span class="book-id"></span></h5>
+        <p>Summary:<br><span class="book-summary"></span></p>
+        <button class="closeBtn" onclick="closeBookModal()">Close</button>
+    </div>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+
+</body>
+
+</html>
